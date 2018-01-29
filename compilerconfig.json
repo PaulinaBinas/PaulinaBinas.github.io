@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "fontawesome-free-5.0.6/web-fonts-with-css/scss/_variables.css",
+    "inputFile": "fontawesome-free-5.0.6/web-fonts-with-css/scss/_variables.scss"
+  },
+  {
+    "outputFile": "styles/StyleSheet.css",
+    "inputFile": "styles/StyleSheet.scss"
+  },
+  {
+    "outputFile": "fontawesome-free-5.0.6/web-fonts-with-css/scss/_animated.css",
+    "inputFile": "fontawesome-free-5.0.6/web-fonts-with-css/scss/_animated.scss"
+  }
+]
