@@ -19,6 +19,7 @@ body {
     header {
         height: 60px;
         background-color: $orange;
+        box-shadow: 0 3px 8px 1px rgba(0,0,0,.3);
 
         nav ul {
             float: right;
@@ -27,19 +28,19 @@ body {
             li {
                 list-style: none;
                 display: inline-block;
-                border: 1px solid $yellow;
                 border-radius: 3px;
-                background-color: $yellow-transparent;
                 padding: 7px;
                 margin-top: 4px;
+                margin-left: 15px;
                 font-family: 'Roboto', sans-serif;
+                font-size: 18px;
                 text-transform: uppercase;
-                color: $black;
+                color: #fff;
                 transition-duration: 1s;
 
                 &:hover {
                     cursor: pointer;
-                    background-color: $yellow;
+                    background-color: $yellow-transparent;
                     transition-duration: .5s;
                 }
             }
@@ -49,11 +50,12 @@ body {
     main {
         height: calc(100% - 80px);
         position: absolute;
+        padding-top: 10px;
 
         .round-picture {
             display: inline-block;
             position: fixed;
-            top: 50px;
+            top: 60px;
             left: 50px;
 
             img {
@@ -86,7 +88,7 @@ body {
 
         .main-content {
             background-color: #fff;
-            height: calc(100% - 150px);
+            height: calc(100% - 185px);
             margin-top: 35px;
             width: calc(100% - 250px);
             margin-left: 125px;
@@ -99,11 +101,47 @@ body {
             .tile {
                 margin-top: 50px;
                 height: 200px;
-                width: 180px;
+                width: 25%;
                 border: 3px solid #822525;
                 border-radius: 5px;
-                box-shadow: 3px 3px 3px rgba(0,0,0,.1);
-    
+                box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+                transition-duration: 1s;
+                transition-timing-function: ease-in-out;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                &:hover {
+                    height: calc(100% - 100px);
+                    cursor: pointer;
+
+                    p {
+                        height: auto;
+                        margin: 10px 5px;
+                        transition-delay: .5s;
+                        transition-duration: 1s;
+                        transition-timing-function: ease-in-out;
+                    }
+                }
+
+                h3 {
+                    text-align: center;
+                    vertical-align: bottom;
+                }
+
+                img {
+                    height: 100px;
+                }
+
+                p {
+                    height: 0;
+                    overflow: hidden;
+                    margin: 0 5px;
+                    transition-delay: .5s;
+                    transition-duration: 1s;
+                    transition-timing-function: ease-in-out;
+                    text-justify: auto;
+                }
             }
         }
     }
