@@ -52,6 +52,11 @@ body {
         position: absolute;
         padding-top: 10px;
 
+        & > h1 {
+            color: #fff;
+            text-align: center;
+        }
+
         .round-picture {
             display: inline-block;
             position: fixed;
