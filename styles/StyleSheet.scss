@@ -134,8 +134,9 @@ body {
                     vertical-align: bottom;
                 }
 
-                img {
-                    height: 100px;
+                i {
+                    font-size: 90px;
+                    text-align: center;
                 }
 
                 p {
@@ -146,6 +147,54 @@ body {
                     transition-duration: 1s;
                     transition-timing-function: ease-in-out;
                     text-justify: auto;
+                }
+            }
+
+            .description {
+                height: 150px;
+                width: 100%;
+                border-bottom: 1px solid rgba(0,0,0,.2);
+            }
+
+            .tiles-container {
+                height: calc(100% - 150px);
+                width: 100%;
+                overflow: auto;
+            }
+        }
+
+        .main-content-small {
+            background-color: #fff;
+            padding: 20px;
+            margin: 0 auto;
+            width: 300px;
+
+            .line {
+                margin: 15px 0;
+
+                & > i {
+                    margin-right: 10px;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                .social-media {
+                    font-size: 40px;
+                    margin-right: 15px;
+                    
+                    &.fa-facebook-square {
+                        color: #3b5998;
+                    }
+
+                    &.fa-steam-square {
+                        color: #000;
+                    }
+
+                    &.fa-linkedin {
+                        color: #0084bf;
+                    }
                 }
             }
         }
