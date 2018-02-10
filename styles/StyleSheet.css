@@ -132,8 +132,10 @@ body {
             color: #3b5998; }
           body main .main-content-small .line .social-media.fa-steam-square {
             color: #000; }
-          body main .main-content-small .line .social-media.fa-linkedin {
+          body main .main-content-small .line .social-media.fa-linkedin-square {
             color: #0084bf; }
+          body main .main-content-small .line .social-media.fa-github-square {
+            color: #24292e; }
   body footer {
     height: 40px;
     background: rgba(23, 13, 0, 0.2);
