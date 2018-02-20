@@ -10,6 +10,8 @@ body {
   background-color: #2b3b33; }
   body > * {
     width: 100%; }
+  body .bold {
+    font-weight: bold; }
   body header {
     height: 60px;
     background-color: #db7000;
@@ -71,6 +73,8 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around; }
+      body main .main-content .description {
+        text-align: center; }
       body main .main-content .tile {
         margin-top: 50px;
         height: 200px;
@@ -80,16 +84,22 @@ body {
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
         transition-duration: 1s;
         transition-timing-function: ease-in-out;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around; }
+        overflow: auto;
+        overflow-x: hidden; }
+        body main .main-content .tile::-webkit-scrollbar {
+          width: 5px;
+          background-color: rgba(0, 0, 0, 0.7); }
+          body main .main-content .tile::-webkit-scrollbar-thumb {
+            width: 3px;
+            background-color: #fff;
+            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.8);
+            border-radius: 2px; }
         body main .main-content .tile:hover {
           height: calc(100% - 100px);
           cursor: pointer; }
-          body main .main-content .tile:hover p {
+          body main .main-content .tile:hover div, body main .main-content .tile:hover p {
             height: auto;
             margin: 10px 5px;
-            transition-delay: .5s;
             transition-duration: 1s;
             transition-timing-function: ease-in-out; }
         body main .main-content .tile h3 {
@@ -97,23 +107,34 @@ body {
           vertical-align: bottom; }
         body main .main-content .tile i {
           font-size: 90px;
-          text-align: center; }
-        body main .main-content .tile p {
+          text-align: center;
+          display: block; }
+        body main .main-content .tile div, body main .main-content .tile p {
           height: 0;
           overflow: hidden;
           margin: 0 5px;
-          transition-delay: .5s;
           transition-duration: 1s;
           transition-timing-function: ease-in-out;
           text-justify: auto; }
+          body main .main-content .tile div a, body main .main-content .tile p a {
+            overflow-wrap: break-word; }
+        body main .main-content .tile.main-tile {
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around; }
       body main .main-content .description {
-        height: 150px;
+        height: 50px;
         width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
       body main .main-content .tiles-container {
-        height: calc(100% - 150px);
+        height: calc(100% - 50px);
         width: 100%;
-        overflow: auto; }
+        overflow: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; }
     body main .main-content-small {
       background-color: #fff;
       padding: 20px;

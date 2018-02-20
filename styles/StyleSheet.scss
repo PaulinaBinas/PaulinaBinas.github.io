@@ -16,6 +16,10 @@ body {
         width: 100%;
     }
 
+    .bold {
+        font-weight: bold;
+    }
+
     header {
         height: 60px;
         background-color: $orange;
@@ -103,6 +107,10 @@ body {
             flex-wrap: wrap;
             justify-content: space-around;
 
+            .description {
+                text-align: center;
+            }
+
             .tile {
                 margin-top: 50px;
                 height: 200px;
@@ -112,18 +120,28 @@ body {
                 box-shadow: 3px 3px 3px rgba(0,0,0,.3);
                 transition-duration: 1s;
                 transition-timing-function: ease-in-out;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
+                overflow: auto;
+                overflow-x: hidden;
+
+                &::-webkit-scrollbar {
+                    width: 5px;
+                    background-color: rgba(0,0,0,.7);   
+
+                    &-thumb {
+                        width: 3px;
+                        background-color: #fff;
+                        box-shadow: 1px 1px 3px 1px rgba(0,0,0,.8);
+                        border-radius: 2px;
+                    }
+                }
 
                 &:hover {
                     height: calc(100% - 100px);
                     cursor: pointer;
 
-                    p {
+                    div, p {
                         height: auto;
                         margin: 10px 5px;
-                        transition-delay: .5s;
                         transition-duration: 1s;
                         transition-timing-function: ease-in-out;
                     }
@@ -137,29 +155,44 @@ body {
                 i {
                     font-size: 90px;
                     text-align: center;
+                    display: block;
                 }
 
-                p {
+                div, p {
                     height: 0;
                     overflow: hidden;
                     margin: 0 5px;
-                    transition-delay: .5s;
                     transition-duration: 1s;
                     transition-timing-function: ease-in-out;
                     text-justify: auto;
+
+                    a {
+                        overflow-wrap: break-word;
+                    }
+                }
+
+                &.main-tile {
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
                 }
             }
 
             .description {
-                height: 150px;
+                height: 50px;
                 width: 100%;
                 border-bottom: 1px solid rgba(0,0,0,.2);
             }
 
             .tiles-container {
-                height: calc(100% - 150px);
+                height: calc(100% - 50px);
                 width: 100%;
                 overflow: auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
             }
         }
 
