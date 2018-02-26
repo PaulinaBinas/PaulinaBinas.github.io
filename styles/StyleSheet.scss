@@ -194,6 +194,36 @@ body {
                 flex-wrap: wrap;
                 justify-content: space-around;
             }
+
+            .column-container {
+                box-sizing: border-box;
+                height: calc(100% - 51px);
+                width: 100%;
+                padding: 10px 20px;
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+
+                .tile {
+                    width: 100%;
+                    height: auto;
+                    min-height: 225px;
+                    display: block;
+
+                    &:first-child {
+                        margin-top: 10px;
+                    }
+
+                    &:hover {
+                        cursor: default;
+                    }
+
+                    & > div {
+                        height: auto;
+                        margin: 10px 15px;
+                    }
+                }
+            }
         }
 
         .main-content-small {

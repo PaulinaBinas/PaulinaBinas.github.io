@@ -135,6 +135,26 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around; }
+      body main .main-content .column-container {
+        box-sizing: border-box;
+        height: calc(100% - 51px);
+        width: 100%;
+        padding: 10px 20px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column; }
+        body main .main-content .column-container .tile {
+          width: 100%;
+          height: auto;
+          min-height: 225px;
+          display: block; }
+          body main .main-content .column-container .tile:first-child {
+            margin-top: 10px; }
+          body main .main-content .column-container .tile:hover {
+            cursor: default; }
+          body main .main-content .column-container .tile > div {
+            height: auto;
+            margin: 10px 15px; }
     body main .main-content-small {
       background-color: #fff;
       padding: 20px;
