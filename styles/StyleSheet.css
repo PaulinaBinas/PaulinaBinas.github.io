@@ -92,14 +92,6 @@ body {
         transition-timing-function: ease-in-out;
         overflow: auto;
         overflow-x: hidden; }
-        body main .main-content .tile::-webkit-scrollbar {
-          width: 5px;
-          background-color: rgba(0, 0, 0, 0.7); }
-          body main .main-content .tile::-webkit-scrollbar-thumb {
-            width: 3px;
-            background-color: #fff;
-            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.8);
-            border-radius: 2px; }
         body main .main-content .tile:hover {
           height: calc(100% - 100px);
           cursor: pointer; }
@@ -141,6 +133,14 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around; }
+        body main .main-content .tiles-container::-webkit-scrollbar {
+          width: 5px;
+          background-color: rgba(0, 0, 0, 0.8); }
+          body main .main-content .tiles-container::-webkit-scrollbar-thumb {
+            width: 3px;
+            background-color: #666;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+            border-radius: 2px; }
       body main .main-content .column-container {
         box-sizing: border-box;
         height: calc(100% - 51px);
@@ -149,6 +149,14 @@ body {
         overflow: auto;
         display: flex;
         flex-direction: column; }
+        body main .main-content .column-container::-webkit-scrollbar {
+          width: 5px;
+          background-color: rgba(0, 0, 0, 0.8); }
+          body main .main-content .column-container::-webkit-scrollbar-thumb {
+            width: 3px;
+            background-color: #666;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+            border-radius: 2px; }
         body main .main-content .column-container .tile {
           width: 100%;
           height: auto;

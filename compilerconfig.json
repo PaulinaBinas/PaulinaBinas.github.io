@@ -10,5 +10,9 @@
   {
     "outputFile": "fontawesome-free-5.0.6/web-fonts-with-css/scss/_animated.css",
     "inputFile": "fontawesome-free-5.0.6/web-fonts-with-css/scss/_animated.scss"
+  },
+  {
+    "outputFile": "styles/scrollbar.css",
+    "inputFile": "styles/scrollbar.scss"
   }
 ]
